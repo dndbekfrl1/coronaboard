@@ -1,0 +1,132 @@
+*{
+    margin: 0 auto;
+}
+body{
+  
+    padding: 80px 40px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #4C4C4C;
+    font-size: 16px;
+    font-weight: normal;
+    /*더보기*/
+    float: right;
+}
+ul,li {margin:0; padding:0;}
+li{list-style: none;}
+.content{
+    padding: 20px 0;
+ 
+    /* margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 100px; */
+} 
+
+/* 각 컨텐츠 제목*/
+.title{
+     margin: 20px 0; 
+}
+span{
+    font-size: 18px;
+    font-weight: bold;
+    color: #4C4C4C;
+}
+/*대한민국 일일 확진자 추이 원 그래프*/
+.graph{
+    width: 100%;
+    height: 100%;
+}
+.korea-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+    background-color: #4C4C4C;
+    /* text-align: center; */
+    border-radius: 100%;
+    z-index: -100;
+}
+.korea-changed {
+    position: absolute;
+    z-index: 50; 
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 99, 71, 0.584);
+}
+.korea-util {
+    box-sizing: border-box;
+    text-align: right;
+    z-index: 9999;
+}
+.korea-util>.live-confirmed {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.korea-util>.changed-confirmed {
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/*세계 dashboard*/
+.worldwide-board {
+    padding: 50px 0;
+    box-sizing: border-box;
+    border-radius: 36px;
+    background-color:#4C4C4C;
+    width:100%;
+    height: 372px;
+    padding: 30px 20px;
+}
+
+.worldwide-board-cell{
+    margin-bottom: 30px ;
+    color: white;
+  
+}
+.util{
+    display: inline-block;
+}   
+.rank{
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+.country{
+    width: 100px;
+    font-size: 15px;
+    font-weight: normal;
+    /* margin-left: 50px;
+    margin-right: 120px; */
+}
+.confirmed{
+    float: right;
+}
+.confirmed .util> div{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+
+/*주요 뉴스*/
+.news-board{
+    margin-left: 0;
+}
+   
+.news-cell{
+    margin-bottom: 30px;
+}
+.news-cell div{
+    color:#4C4C4C;
+}
+.headline{
+    font-weight: bold;
+}
