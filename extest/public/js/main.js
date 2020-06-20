@@ -2,14 +2,14 @@
 
 
 $(function(){
-
-    
-
     var settings = {
         "url": "https://api.covid19api.com/summary",
         "method": "GET",
         "timeout": 0,
       };
+
+      var x=1;
+      console.log(x);
 
       $.ajax(settings).done(function (response) {
         var Global = 'Global'; Global=response[Global];
