@@ -17,10 +17,10 @@ $(function(){
         //새 확진자 
         $(".changed-confirmed").text(korea_south.TotalConfirmed+"명");
         //새 확진자 증가 원그래프 애니메이션 
-        var inc=korea_south.NewConfirmed*1;
+        var inc=korea_south.NewConfirmed*6;
         $(".korea-changed").animate({
-            width: inc+'%',
-            height: inc+'%'
+            width: inc+'px',
+            height: inc+'px'
         });
         //////////////
         /* 전세계 확진자 순 나열 */ 
