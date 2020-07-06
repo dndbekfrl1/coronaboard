@@ -1,0 +1,73 @@
+*{
+    margin: 0 auto;
+}
+body{
+  
+    padding: 40px 40px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #4C4C4C;
+    font-size: 16px;
+    font-weight: normal;
+    /*더보기*/
+    float: right;
+}
+ul,li {margin:0; padding:0;}
+li{list-style: none;}
+.content{
+    padding: 20px 0;
+
+} 
+
+/* 각 컨텐츠 제목*/
+.title{
+     margin: 20px 0; 
+}
+span{
+    font-size: 18px;
+    font-weight: bold;
+    color: #4C4C4C;
+}
+
+/*세계 dashboard*/
+.worldwide-board {
+    padding: 50px 0;
+    box-sizing: border-box;
+    border-radius: 36px;
+    background-color:#4C4C4C;
+    width:100%;
+    padding: 30px 20px;
+}
+
+.worldwide-board-cell{
+    margin-bottom: 30px ;
+    color: white;
+  
+}
+.util{
+    display: inline-block;
+}   
+.rank{
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+.country{
+    width: 100px;
+    font-size: 15px;
+    font-weight: normal;
+    /* margin-left: 50px;
+    margin-right: 120px; */
+}
+.confirmed{
+    float: right;
+}
+.confirmed .util> div{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+
+
