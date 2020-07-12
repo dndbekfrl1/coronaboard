@@ -13,6 +13,7 @@ a{
     font-weight: normal;
     /*더보기*/
     float: right;
+    margin-bottom: 10px;
 }
 ul,li {margin:0; padding:0;}
 li{list-style: none;}
@@ -129,4 +130,9 @@ span{
 }
 .headline{
     font-weight: bold;
+}
+
+.summary{
+    overflow: hidden;
+    height: 37px;
 }
