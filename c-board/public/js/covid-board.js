@@ -21,12 +21,14 @@ $(function () {
         /* 전세계 확진자 순 나열 */
         $(".NewConfirmed").text(Global.NewConfirmed + " 명");
         Countries.sort(function (a, b) { return b.TotalConfirmed - a.TotalConfirmed; });
-
-        for (var i = 0; i < Countries.length; i++) {
+        
+        var max=100;
+        
+        for (var i = 0; i < max; i++) {
             var cell = $("#worldwide-board-cell").clone(true);
             $("#worldwide-board-cell").after(cell);
         }
-        for (var i = 0; i < Countries.length; i++) {
+        for (var i = 0; i < max; i++) {
             $(".worldwide-board li:nth-child(" + (i + 1) + ")").children('.rank').text(i + 1);
             $(".worldwide-board li:nth-child(" + (i + 1) + ")").children('.country').text(Countries[i].Country);
             $(".worldwide-board li:nth-child(" + (i + 1) + ")").children('.confirmed').children('.total-confirmed').text(Countries[i].TotalConfirmed + "명");
