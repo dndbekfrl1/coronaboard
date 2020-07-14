@@ -28,20 +28,24 @@ $(function(){
         Countries.sort(function(a,b){return b.TotalConfirmed-a.TotalConfirmed;});
         console.log(Countries);
    
-        //board for문으로 수정해야함...
-        for(var i=0;i<5;i++){
-            $(".worldwide-board li:nth-child("+(i+1)+")").children('.rank').text(i+1);
-            $(".worldwide-board li:nth-child("+(i+1)+")").children('.country').text(Countries[i].Country);
-            $(".worldwide-board li:nth-child("+(i+1)+")").children('.confirmed').children('.total-confirmed').text(Countries[i].TotalConfirmed+"명");
-            var today_updated=parseInt(Countries[i].NewConfirmed);
-            if(today_updated>0){
-                $(".worldwide-board li:nth-child("+(i+1)+")").children('.confirmed').children('.today-updated').text("+"+today_updated).css('color','#D15252');
-            }else{
-                $(".worldwide-board li:nth-child("+(i+1)+")").children('.confirmed').children('.today-updated').text(today_updated);
-            }
-            
-            console.log(i);
+        var max=5;
+        
+        for (var i = 0; i < max; i++) {
+            var cell = $("#worldwide-board-cell").clone(true);
+            $("#worldwide-board-cell").after(cell);
         }
+        for (var i = 0; i < max; i++) {
+            $(".worldwide-board li:nth-child(" + (i + 1) + ")").children('.rank').text(i + 1);
+            $(".worldwide-board li:nth-child(" + (i + 1) + ")").children('.country').text(Countries[i].Country);
+            $(".worldwide-board li:nth-child(" + (i + 1) + ")").children('.confirmed').children('.total-confirmed').text(Countries[i].TotalConfirmed + "명");
+            var today_updated = parseInt(Countries[i].NewConfirmed);
+            if (today_updated > 0) {
+                $(".worldwide-board li:nth-child(" + (i + 1) + ")").children('.confirmed').children('.today-updated').text("+" + today_updated).css('color', '#D15252');
+            } else {
+                $(".worldwide-board li:nth-child(" + (i + 1) + ")").children('.confirmed').children('.today-updated').text(today_updated);
+            }
+        }
+      
       }); 
 });
 
@@ -54,7 +58,15 @@ $(function(){
       };
     $.ajax(settings).done(function (response) {
         NewsData=response;
+        var m=3;
         /*관련 뉴스 */
+        var max=5;
+        for (var i = 0; i < max; i++) {
+            console.log(i);
+            var cell = $("#news-list-cell").clone(true);
+            $("#news-list-cell").after(cell);
+        }
+
          for(var  i=0;i<5;i++){
             $( 'ul > li:nth-child('+i+') > a').attr('href',NewsData[i].Link);
             $( 'ul > li:nth-child('+i+') > a > div.headline').text(NewsData[i].Headline);
