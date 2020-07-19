@@ -1,0 +1,48 @@
+*{
+    margin: 0 auto;
+}
+body{
+  
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #4C4C4C;
+    font-size: 16px;
+    font-weight: normal;
+
+}
+.title{
+    margin: 20px 0; 
+}
+ul,li {margin:0; padding:0;}
+li{list-style: none;}
+.content{
+    padding: 20px 0;
+ 
+    /* margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 100px; */
+} 
+
+/*주요 뉴스*/
+.news-board{
+    margin-left: 0;
+}
+   
+.news-cell{
+    margin-bottom: 30px;
+}
+.news-cell div{
+    color:#4C4C4C;
+}
+.headline{
+    font-weight: bold;
+}
+
+.summary{
+    overflow: hidden;
+    height: 37px;
+}

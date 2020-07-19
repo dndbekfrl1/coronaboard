@@ -1,5 +1,5 @@
 $(function(){
-    var max=5;
+    var max=10;
     for (var i = 0; i < max; i++) {
         console.log(i);
         var cell = $("#news-list-cell").clone(true);
@@ -17,7 +17,7 @@ $(function(){
         /*관련 뉴스 */
 
 
-         for(var  i=0;i<5;i++){
+         for(var  i=0;i<max;i++){
             $( 'ul > li:nth-child('+i+') > a').attr('href',NewsData[i].Link);
             $( 'ul > li:nth-child('+i+') > a > div.headline').text(NewsData[i].Headline);
             $( 'ul > li:nth-child('+i+') > a > div.summary').text(NewsData[i].Summary);

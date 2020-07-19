@@ -12,8 +12,8 @@ module.exports = function (app) {
          var $ = cheerio.load(body);
          var NewsArray = new Array();
          var headline; var summary; var date; var link;
-
-         for (var i = 1; i <= 5; i++) {
+         var cnt=10;
+         for (var i = 1; i <= cnt; i++) {
             var News = new Object(); // 뉴스 헤드라인, summary, date, 링크
 
             link = "https://www.ytn.co.kr"
