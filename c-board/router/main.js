@@ -28,15 +28,9 @@ module.exports = function (app) {
             News.Headline = headline; News.Summary = summary; News.Date = date; News.Link = link;
             
             console.log(i);NewsArray.push(News);
-            //res.send(News);
          }
 
          console.log(NewsArray);
-         // fs.writeFile("newsdata.js", "var NewsData =" + JSON.stringify(NewsArray), function (err) {
-         //    if (err) throw err;
-         //    console.log('complete');
-         // }
-         // );
          res.send(NewsArray);
       })
    });

@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-<!--
-https://www.ytn.co.kr/issue/corona.php
-
-fs -> json 파일 읽기
-
-
--->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -16,7 +8,7 @@ fs -> json 파일 읽기
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-  
+
 </head>
 
 <body>
@@ -48,9 +40,13 @@ fs -> json 파일 읽기
         <div class="title">
             <span>전세계 확진자 현황</span>
             <span><a href="covid-board.html">더보기</a></span>
+            <div class="NewConfirmed_wrapper">
+                <span>추가 확진자 수:</span>
+                <span class="NewConfirmed"></span>
+            </div>
         </div>
         <div>
-            <span class="NewConfirmed"></span>
+            
         </div>
         <ul class="worldwide-board" id="worldwide-board">
             <li class="worldwide-board-cell" id="worldwide-board-cell">
